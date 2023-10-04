@@ -4,7 +4,7 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for opentofu.
 GH_REPO="https://github.com/opentofu/opentofu"
-TOOL_NAME="tofu"
+TOOL_NAME="opentofu"
 TOOL_TEST="tofu version"
 
 fail() {
@@ -31,7 +31,6 @@ list_github_tags() {
 }
 
 list_all_versions() {
-	# TODO: Adapt this. By default we simply list the tag names from GitHub releases.
 	# Change this function if opentofu has other means of determining installable versions.
 	list_github_tags
 }
@@ -75,7 +74,7 @@ download_release() {
 install_version() {
 	local install_type="$1"
 	local version="$2"
-	local install_path="${3}"
+	local install_path="${3%/bin}/bin"
 
 	if [ "$install_type" != "version" ]; then
 		fail "asdf-$TOOL_NAME supports release installs only"
