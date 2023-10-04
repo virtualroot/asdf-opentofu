@@ -36,15 +36,39 @@ list_all_versions() {
 	list_github_tags
 }
 
+get_platform() {
+	local -r kernel="$(uname -s)"
+	if [[ ${OSTYPE} == "msys" || ${kernel} == "CYGWIN"* || ${kernel} == "MINGW"* ]]; then
+		echo windows
+	else
+		uname | tr '[:upper:]' '[:lower:]'
+	fi
+}
+
+get_arch() {
+	local -r machine="$(uname -m)"
+
+	if [[ ${machine} == "arm64" ]] || [[ ${machine} == "aarch64" ]]; then
+		echo "arm64"
+	elif [[ ${machine} == *"arm"* ]] || [[ ${machine} == *"aarch"* ]]; then
+		echo "arm"
+	elif [[ ${machine} == *"386"* ]]; then
+		echo "386"
+	else
+		echo "amd64"
+	fi
+}
+
 download_release() {
 	local version filename url
 	version="$1"
 	filename="$2"
+	local -r platform="$(get_platform)"
+	local -r arch="$(get_arch)"
 
-	# TODO: Adapt the release URL convention for opentofu
-	url="$GH_REPO/archive/v${version}.zip"
+	url="$GH_REPO/releases/download/v${version}/tofu_${version}_${platform}_${arch}.zip"
 
-	echo "* Downloading $TOOL_NAME release $version..."
+	echo "* Downloading $TOOL_NAME release v$version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 }
 
