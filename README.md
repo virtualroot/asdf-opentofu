@@ -25,8 +25,6 @@
 Plugin:
 
 ```shell
-asdf plugin add opentofu
-# or
 asdf plugin add opentofu https://github.com/virtualroot/asdf-opentofu.git
 ```
 
