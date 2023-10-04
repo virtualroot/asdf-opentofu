@@ -4,7 +4,7 @@ set -euo pipefail
 
 # TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for opentofu.
 GH_REPO="https://github.com/opentofu/opentofu"
-TOOL_NAME="opentofu"
+TOOL_NAME="tofu"
 TOOL_TEST="tofu --version"
 
 fail() {

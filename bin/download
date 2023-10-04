@@ -16,7 +16,7 @@ release_file="$ASDF_DOWNLOAD_PATH/$TOOL_NAME-$ASDF_INSTALL_VERSION.zip"
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
 
 #  Extract contents of zip file into the download directory
-zip -qq "$release_file" -d "$ASDF_DOWNLOAD_PATH" || fail "Could not extract $release_file"
+unzip -qq "$release_file" -d "$ASDF_DOWNLOAD_PATH" || fail "Could not extract $release_file"
 
 # Remove the zip file since we don't need to keep it
 rm "$release_file"
