@@ -2,7 +2,7 @@
 
 # asdf-opentofu [![Build](https://github.com/virtualroot/asdf-opentofu/actions/workflows/build.yml/badge.svg)](https://github.com/virtualroot/asdf-opentofu/actions/workflows/build.yml) [![Lint](https://github.com/virtualroot/asdf-opentofu/actions/workflows/lint.yml/badge.svg)](https://github.com/virtualroot/asdf-opentofu/actions/workflows/lint.yml)
 
-[opentofu](https://opentofu.org/docs) plugin for the [asdf version manager](https://asdf-vm.com).
+[opentofu](https://opentofu.org/) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -15,10 +15,7 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
-- `bash`, `curl`, `unzip`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+- `bash`, `curl`, `unzip`
 
 # Install
 
@@ -41,7 +38,7 @@ asdf install opentofu latest
 asdf global opentofu latest
 
 # Now opentofu commands are available
-tofu --version
+tofu version
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
