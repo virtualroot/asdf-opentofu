@@ -16,6 +16,7 @@
 # Dependencies
 
 - `bash`, `curl`, `unzip`
+  - `cosign`: (optional) If installed, asdf will perform signature verification
 
 # Install
 
@@ -43,6 +44,10 @@ tofu version
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
 install & manage versions.
+
+# Environment Variable Options
+
+* ASDF_OPENTOFU_SKIP_VERIFY: skip verifying checksums and signatures (default: `false`)
 
 # Contributing
 
