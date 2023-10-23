@@ -47,7 +47,7 @@ install & manage versions.
 
 # Environment Variable Options
 
-* ASDF_OPENTOFU_SKIP_VERIFY: skip verifying checksums and signatures (default: `false`)
+* `ASDF_OPENTOFU_SKIP_VERIFY`: skip verifying checksums and signatures (default: `false`)
 
 # Contributing
 
