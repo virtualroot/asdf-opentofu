@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.1...v1.1.2) (2023-12-19)
+
+
+### Bug Fixes
+
+* typo in URL :( ([28d8a07](https://github.com/virtualroot/asdf-opentofu/commit/28d8a0764049bb27273350c59f2f337bfe0bac50))
+
 ## [1.1.1](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.0...v1.1.1) (2023-12-19)
 
 
