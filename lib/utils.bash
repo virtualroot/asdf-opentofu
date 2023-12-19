@@ -117,7 +117,7 @@ verify() {
 	local -r checksum_file="${TOOL_BIN_NAME}_${version}_SHA256SUMS"
 	local -r signature_file="${checksum_file}.sig"
 	local -r cert_file="${checksum_file}.pem"
-	local -r cert_identity="https://github.com/opentofu/opentofu/.github/workflows/release.yml@refs/tags/v${version}"
+	local -r cert_identity="https://github.com/opentofu/opentofu/.github/workflows/release.yml@refs/head/main"
 	local -r cert_oidc_issuer="https://token.actions.githubusercontent.com"
 
 	baseURL="$GH_REPO/releases/download/v${version}"
