@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.0...v1.1.1) (2023-12-19)
+
+
+### Bug Fixes
+
+* Change certificate-identity URL ([#18](https://github.com/virtualroot/asdf-opentofu/issues/18)) ([f8efc56](https://github.com/virtualroot/asdf-opentofu/commit/f8efc5627907c7da24e7b9cb52aad95184742dd1))
+
 ## [1.1.0](https://github.com/virtualroot/asdf-opentofu/compare/v1.0.0...v1.1.0) (2023-11-11)
 
 
