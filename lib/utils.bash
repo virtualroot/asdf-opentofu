@@ -117,7 +117,7 @@ verify() {
 	local -r checksum_file="${TOOL_BIN_NAME}_${version}_SHA256SUMS"
 	local -r signature_file="${checksum_file}.sig"
 	local -r cert_file="${checksum_file}.pem"
-	local -r cert_identity="https://github.com/opentofu/opentofu/.github/workflows/release.yml@refs/heads/v${version%.*}"
+	local -r cert_identity="https://github\.com/opentofu/opentofu/\.github/workflows/release\.yml@refs/(heads|tags)/(main|v1\..+)"
 	local -r cert_oidc_issuer="https://token.actions.githubusercontent.com"
 
 	baseURL="$GH_REPO/releases/download/v${version}"
@@ -127,11 +127,13 @@ verify() {
 		curl "${curl_opts[@]}" -o "${download_path}/${file}" "${baseURL}/${file}" || fail "Could not download ${baseURL}/${file}"
 	done
 
-	if ! (cosign verify-blob --signature "${download_path}/${signature_file}" \
-		--certificate "${download_path}/${cert_file}" \
-		--certificate-identity "${cert_identity}" \
-		--certificate-oidc-issuer="${cert_oidc_issuer}" \
-		"${download_path}/${checksum_file}"); then
+	if ! (
+		cosign verify-blob --signature "${download_path}/${signature_file}" \
+			--certificate "${download_path}/${cert_file}" \
+			--certificate-identity-regexp="${cert_identity}" \
+			--certificate-oidc-issuer="${cert_oidc_issuer}" \
+			"${download_path}/${checksum_file}"
+	); then
 		echo "signature verification failed" >&2
 		return 1
 	fi
