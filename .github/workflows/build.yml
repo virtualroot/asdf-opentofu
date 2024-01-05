@@ -10,12 +10,22 @@ jobs:
   plugin_test:
     name: asdf plugin test
     strategy:
+      fail-fast: false
       matrix:
         os:
           - ubuntu-latest
           - macos-latest
+        cosign:
+          - true
+          - false
     runs-on: ${{ matrix.os }}
     steps:
+      - name: Install Cosign
+        if: ${{ matrix.cosign }}
+        uses: sigstore/cosign-installer@v3
+      - name: Get Cosign version
+        if: ${{ matrix.cosign }}
+        run: cosign version
       - name: asdf_plugin_test
         uses: asdf-vm/actions/plugin-test@v3
         with:
