@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.3...v1.1.4) (2024-01-05)
+
+
+### Bug Fixes
+
+* Change to regexp for certificate-identity URL ([#24](https://github.com/virtualroot/asdf-opentofu/issues/24)) ([f6e1873](https://github.com/virtualroot/asdf-opentofu/commit/f6e18730f914464ecf29150d78286c562493d0df))
+
 ## [1.1.3](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.2...v1.1.3) (2023-12-19)
 
 
