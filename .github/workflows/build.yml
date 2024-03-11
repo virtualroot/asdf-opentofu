@@ -15,6 +15,7 @@ jobs:
         os:
           - ubuntu-latest
           - macos-latest
+          - macos-14
         cosign:
           - true
           - false
