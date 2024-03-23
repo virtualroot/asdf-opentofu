@@ -2,7 +2,7 @@
 
 # asdf-opentofu [![Build](https://github.com/virtualroot/asdf-opentofu/actions/workflows/build.yml/badge.svg)](https://github.com/virtualroot/asdf-opentofu/actions/workflows/build.yml) [![Lint](https://github.com/virtualroot/asdf-opentofu/actions/workflows/lint.yml/badge.svg)](https://github.com/virtualroot/asdf-opentofu/actions/workflows/lint.yml)
 
-[opentofu](https://opentofu.org/) plugin for the [asdf version manager](https://asdf-vm.com).
+Official [opentofu](https://opentofu.org/) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -24,23 +24,21 @@ Plugin:
 
 ```shell
 asdf plugin add opentofu
-# or
-asdf plugin add opentofu https://github.com/virtualroot/asdf-opentofu.git
 ```
 
-opentofu:
+OpenTofu:
 
 ```shell
 # Show all installable versions
 asdf list-all opentofu
 
-# Install specific version
+# Install a specific version
 asdf install opentofu latest
 
 # Set a version globally (on your ~/.tool-versions file)
 asdf global opentofu latest
 
-# Now opentofu commands are available
+# Now OpenTofu commands are available
 tofu version
 ```
 
@@ -53,7 +51,7 @@ install & manage versions.
 
 # Contributing
 
-Contributions of any kind welcome! See the [contributing guide](contributing.md).
+Contributions of any kind are welcome! See the [contributing guide](contributing.md).
 
 [Thanks goes to these contributors](https://github.com/virtualroot/asdf-opentofu/graphs/contributors)!
 
