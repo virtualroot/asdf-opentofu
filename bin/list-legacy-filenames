@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: Copyright (c) 2017 Jack Henry & Associates
+
+echo ".opentofu-version ${ASDF_OPENTOFU_VERSION_FILE:-main.tofu}"
