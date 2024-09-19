@@ -48,6 +48,7 @@ install & manage versions.
 # Environment Variable Options
 
 * `ASDF_OPENTOFU_SKIP_VERIFY`: skip verifying checksums and signatures (default: `false`)
+* `ASDF_OPENTOFU_VERSION_FILE`: Which .tofu-file to examine for version constraints when using the `legacy_version_file` option in `~/.asdfrc`. (default: `main.tofu`)
 
 # Contributing
 
