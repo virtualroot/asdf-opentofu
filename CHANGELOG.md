@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.4...v1.2.0) (2024-09-19)
+
+
+### Features
+
+* support for legacy_version_file mode ([#38](https://github.com/virtualroot/asdf-opentofu/issues/38)) ([b44c09e](https://github.com/virtualroot/asdf-opentofu/commit/b44c09e70286b534bc2bcbbcb238d09728f72e4e))
+
 ## [1.1.4](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.3...v1.1.4) (2024-01-05)
 
 
