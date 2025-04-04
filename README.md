@@ -23,7 +23,7 @@ Official [opentofu](https://opentofu.org/) plugin for the [asdf version manager]
 Plugin:
 
 ```shell
-asdf plugin add opentofu
+asdf plugin add opentofu https://github.com/virtualroot/asdf-opentofu.git
 ```
 
 OpenTofu:
