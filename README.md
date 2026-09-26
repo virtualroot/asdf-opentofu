@@ -15,8 +15,8 @@ Official [opentofu](https://opentofu.org/) plugin for the [asdf version manager]
 
 # Dependencies
 
-- `bash`, `curl`, `unzip`
-  - `cosign`: (optional) If installed, asdf will perform signature verification
+- `bash`, `curl`, `unzip`, `sha256sum` or `shasum`
+  - `cosign`: (optional) If installed, asdf will also verify the signature of the checksum file
 
 # Install
 
