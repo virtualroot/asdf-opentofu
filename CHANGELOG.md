@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/virtualroot/asdf-opentofu/compare/v1.2.0...v1.2.1) (2026-09-27)
+
+
+### Bug Fixes
+
+* use full url for plugin add instructions ([#55](https://github.com/virtualroot/asdf-opentofu/issues/55)) ([abe1013](https://github.com/virtualroot/asdf-opentofu/commit/abe1013677c56742c74adcac79f0734e6c232e09))
+* verify release archive against SHA256SUMS ([#91](https://github.com/virtualroot/asdf-opentofu/issues/91)) ([2f83a18](https://github.com/virtualroot/asdf-opentofu/commit/2f83a18db05a854a945fba2ce92e42830850633d))
+
 ## [1.2.0](https://github.com/virtualroot/asdf-opentofu/compare/v1.1.4...v1.2.0) (2024-09-19)
 
 
